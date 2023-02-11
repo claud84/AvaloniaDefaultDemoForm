@@ -1,0 +1,51 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Design.PreviewWith>
+        <Border Padding="0" Width="200" Height="60">
+            <!-- Add Controls for Previewer Here -->
+            <TextBox Classes="special" IsReadOnly="False">TextBox</TextBox>
+        </Border>
+    </Design.PreviewWith>
+    <!-- TextBox.special -->
+    <Style Selector="TextBox.special">
+        <Setter Property="Background" Value="#F7F7F7" />
+        <Setter Property="FontSize" Value="12" />
+    </Style>
+    <Style Selector="TextBox.special:focus /template/ Border#PART_BorderElement">
+        <Setter Property="Height" Value="24" />
+        <Setter Property="MinHeight" Value="24" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Margin" Value="4" />
+        <Setter Property="BorderBrush" Value="#FFFFFF" />
+        <Setter Property="CornerRadius" Value="4" />
+        <Setter Property="BorderLineJoin" Value="Round" />
+        <Setter Property="Background" Value="LightGray" />
+        <Setter Property="BoxShadow" Value="0 2 3 0.2 #A34E87" />
+    </Style>
+    <Style Selector="TextBox.special:not(:focus) /template/ Border#PART_BorderElement">
+        <Setter Property="Height" Value="24" />
+        <Setter Property="MinHeight" Value="24" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Margin" Value="4" />
+        <Setter Property="BorderBrush" Value="#FFFFFF" />
+        <Setter Property="CornerRadius" Value="4" />
+        <Setter Property="BorderLineJoin" Value="Round" />
+        <Setter Property="Background" Value="LightGray" />
+        <Setter Property="BoxShadow" Value="0 2 3 0.2 Gray" />
+    </Style>
+    <Style Selector="TextBox.special[IsReadOnly=true] /template/ Border#PART_BorderElement">
+        <Setter Property="Height" Value="24" />
+        <Setter Property="MinHeight" Value="24" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Margin" Value="4" />
+        <Setter Property="BorderBrush" Value="#A7A7A7" />
+        <Setter Property="CornerRadius" Value="4" />
+        <Setter Property="BorderLineJoin" Value="Round" />
+        <Setter Property="Background" Value="LightGray" />
+        <Setter Property="BoxShadow" Value="0 2 3 0.2 Gray" />
+    </Style>
+    <Style Selector="TextBox.special /template/ TextPresenter#PART_TextPresenter">
+        <Setter Property="VerticalAlignment" Value="Center" />
+    </Style>
+
+</Styles>

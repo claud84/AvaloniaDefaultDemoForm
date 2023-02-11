@@ -1,0 +1,23 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:add="clr-namespace:AvaloniaDefaultDemoForm"
+        mc:Ignorable="d" d:DesignWidth="240" d:DesignHeight="240" Padding="10"
+        x:Class="AvaloniaDefaultDemoForm.MainWindow"
+        Title="AvaloniaDefaultDemoForm" Width="640" Height="480">
+    <Grid ShowGridLines="true" Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="4*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <add:CustomTextBox x:Name="CustomTextBox" SupportingText="text support" Value="Text Value"
+                           FocusChanged="CustomTextBox_OnFocusChanged"
+                           />
+        <CheckBox  Margin="10" Grid.Row="1"  Click="ToggleButton_OnChecked">Readonly</CheckBox>
+    </Grid>
+</Window>
